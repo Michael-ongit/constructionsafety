@@ -1,0 +1,69 @@
+.ehs-bubble-row {
+  display: flex;
+  animation: ehs-fade-in 180ms ease-out;
+}
+
+.ehs-bubble-row--user {
+  justify-content: flex-end;
+}
+
+.ehs-bubble {
+  max-width: 84%;
+  padding: 10px 13px;
+  border-radius: var(--radius-md);
+  font-size: 0.89rem;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.ehs-bubble--user {
+  background: var(--user-bubble);
+  color: var(--user-bubble-text);
+  border-bottom-right-radius: 4px;
+}
+
+.ehs-bubble--assistant {
+  background: var(--assistant-bubble);
+  color: var(--assistant-bubble-text);
+  border-bottom-left-radius: 4px;
+}
+
+.ehs-bubble-error {
+  color: var(--danger);
+}
+
+.ehs-sql-toggle-wrap {
+  margin-top: 8px;
+}
+
+.ehs-sql-toggle {
+  border: none;
+  background: none;
+  color: var(--accent);
+  font-size: 0.78rem;
+  cursor: pointer;
+  padding: 0;
+}
+
+.ehs-sql-block {
+  margin-top: 6px;
+  padding: 8px 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  font-size: 0.76rem;
+  overflow-x: auto;
+  white-space: pre-wrap;
+}
+
+@keyframes ehs-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,2 @@
+"""API route modules — registered in main.py."""
+from . import incidents, activity_logs, analytics, safety_model, upload, onedrive, stream, cameras, activity_insights, segments, uaucs, auth, speech, dashboard

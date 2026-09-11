@@ -1,0 +1,56 @@
+.ehs-input-bar {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  padding: 12px;
+  border-top: 1px solid var(--border);
+  flex-shrink: 0;
+  background: var(--surface);
+}
+
+.ehs-input {
+  flex: 1;
+  resize: none;
+  border: 1px solid var(--border);
+  background: var(--surface-2);
+  color: var(--text);
+  border-radius: var(--radius-md);
+  padding: 10px 12px;
+  font-size: 0.88rem;
+  font-family: inherit;
+  max-height: 120px;
+  transition: border-color var(--transition-fast);
+}
+
+.ehs-input:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.ehs-send-btn {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+  border: none;
+  border-radius: 50%;
+  background: var(--accent);
+  color: var(--accent-contrast);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background var(--transition-fast), opacity var(--transition-fast);
+}
+
+.ehs-send-btn:hover:not(:disabled) {
+  background: var(--accent-hover);
+}
+
+.ehs-send-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.ehs-send-btn--stop {
+  background: var(--danger);
+}

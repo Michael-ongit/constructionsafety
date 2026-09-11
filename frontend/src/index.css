@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Mobile touch & scroll polish */
+.scroll-touch {
+  -webkit-overflow-scrolling: touch;
+}
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+button, a, input, select, textarea {
+  font-size: 16px;
+}
+.hide-scrollbar::-webkit-scrollbar { display: none; }
+.hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+@media (max-width: 767px) {
+  ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+}
+
+/* Skeleton shimmer animation */
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+.skeleton {
+  background: linear-gradient(90deg, #f1f5f9 25%, #e2e8f0 50%, #f1f5f9 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+  border-radius: 8px;
+}
+
+/* Instant touch feedback for mobile buttons */
+.touch-feedback {
+  transition: transform 0.1s, opacity 0.1s;
+  -webkit-tap-highlight-color: transparent;
+}
+.touch-feedback:active {
+  transform: scale(0.97);
+  opacity: 0.8;
+}
+
+/* Prevent layout shifts on image loads */
+.img-placeholder {
+  background: #f1f5f9;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Hardware-accelerated scroll containers */
+.accelerate-scroll {
+  will-change: scroll-position;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+}
+
+/* Page enter transition */
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.page-enter {
+  animation: page-enter 0.25s ease-out both;
+}
+
+/* Tailwind animate-in utilities */
+@keyframes fade-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes slide-in-from-bottom {
+  from { transform: translateY(1rem); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+.animate-in {
+  animation-fill-mode: both;
+}
+.fade-in {
+  animation-name: fade-in;
+}
+.slide-in-from-bottom-4 {
+  animation-name: slide-in-from-bottom;
+}
+.duration-500 {
+  animation-duration: 500ms;
+}
+
+/* ─── Chatbot design tokens ──────────────────────────────────────────────── */
+:root {
+  --panel-width: 400px;
+  --transition-fast: 160ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-medium: 260ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ─── Chatbot light theme ────────────────────────────────────────────────── */
+:root,
+[data-theme="light"] {
+  --ehs-bg: #f6f7f9;
+  --ehs-surface: #ffffff;
+  --ehs-surface-2: #f1f2f5;
+  --ehs-border: #e3e5e9;
+  --ehs-text: #1a1d23;
+  --ehs-text-muted: #6b7280;
+  --ehs-accent: #4f46e5;
+  --ehs-accent-hover: #4338ca;
+  --ehs-accent-contrast: #ffffff;
+  --ehs-user-bubble: #4f46e5;
+  --ehs-user-bubble-text: #ffffff;
+  --ehs-assistant-bubble: #f1f2f5;
+  --ehs-assistant-bubble-text: #1a1d23;
+  --ehs-success: #10b981;
+  --ehs-danger: #ef4444;
+  --ehs-shadow: 0 8px 30px rgba(20, 20, 30, 0.12);
+  --ehs-scrollbar-thumb: #d3d5db;
+}
+
+/* ─── Chatbot dark theme ─────────────────────────────────────────────────── */
+[data-theme="dark"] {
+  --ehs-bg: #0f1115;
+  --ehs-surface: #171a21;
+  --ehs-surface-2: #1f232c;
+  --ehs-border: #2a2e38;
+  --ehs-text: #e8e9ec;
+  --ehs-text-muted: #9aa0ab;
+  --ehs-accent: #818cf8;
+  --ehs-accent-hover: #9ba3fa;
+  --ehs-accent-contrast: #101116;
+  --ehs-user-bubble: #4f46e5;
+  --ehs-user-bubble-text: #ffffff;
+  --ehs-assistant-bubble: #21252f;
+  --ehs-assistant-bubble-text: #e8e9ec;
+  --ehs-success: #34d399;
+  --ehs-danger: #f87171;
+  --ehs-shadow: 0 8px 30px rgba(0, 0, 0, 0.45);
+  --ehs-scrollbar-thumb: #363c48;
+}
+
+/* ─── Chatbot scoped aliases (avoids conflicts with main app tokens) ─────── */
+:root,
+[data-theme="light"],
+[data-theme="dark"] {
+  --bg: var(--ehs-bg);
+  --surface: var(--ehs-surface);
+  --surface-2: var(--ehs-surface-2);
+  --border: var(--ehs-border);
+  --text: var(--ehs-text);
+  --text-muted: var(--ehs-text-muted);
+  --accent: var(--ehs-accent);
+  --accent-hover: var(--ehs-accent-hover);
+  --accent-contrast: var(--ehs-accent-contrast);
+  --user-bubble: var(--ehs-user-bubble);
+  --user-bubble-text: var(--ehs-user-bubble-text);
+  --assistant-bubble: var(--ehs-assistant-bubble);
+  --assistant-bubble-text: var(--ehs-assistant-bubble-text);
+  --success: var(--ehs-success);
+  --danger: var(--ehs-danger);
+  --shadow: var(--ehs-shadow);
+  --scrollbar-thumb: var(--ehs-scrollbar-thumb);
+}

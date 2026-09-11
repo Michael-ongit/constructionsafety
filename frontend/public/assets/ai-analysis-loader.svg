@@ -1,0 +1,108 @@
+<svg width="200" height="200" viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <style>
+    .ring-rotate { animation: spin 3s linear infinite; transform-origin: 100px 100px; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    .ai-badge { animation: float 3s ease-in-out infinite; }
+    @keyframes float { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-3px); } }
+  </style>
+  <defs>
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3B82F6"/>
+      <stop offset="100%" stop-color="#2563EB"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#EFF6FF"/>
+      <stop offset="100%" stop-color="#DBEAFE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Outer track ring -->
+  <circle cx="100" cy="100" r="86" stroke="#E2E8F0" stroke-width="12" fill="none"/>
+
+  <!-- Progress arc with gap at bottom -->
+  <g class="ring-rotate">
+    <path d="M100 14 A86 86 0 1 1 25.6 159.4" stroke="url(#ringGrad)" stroke-width="12" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Track segment markers -->
+  <g class="ring-rotate">
+    <circle cx="100" cy="14" r="2.5" fill="#2563EB"/>
+    <circle cx="150" cy="32" r="2.5" fill="#2563EB"/>
+    <circle cx="180" cy="72" r="2.5" fill="#2563EB"/>
+    <circle cx="186" cy="120" r="2.5" fill="#2563EB"/>
+    <circle cx="169" cy="164" r="2.5" fill="#93C5FD" opacity="0.5"/>
+    <circle cx="135" cy="189" r="2.5" fill="#93C5FD" opacity="0.5"/>
+    <circle cx="65" cy="189" r="2.5" fill="#93C5FD" opacity="0.5"/>
+    <circle cx="31" cy="164" r="2.5" fill="#93C5FD" opacity="0.5"/>
+  </g>
+
+  <!-- Inner background circle -->
+  <circle cx="100" cy="100" r="74" fill="url(#skyGrad)" opacity="0.4"/>
+
+  <!-- Ground plane -->
+  <path d="M42 147h116" stroke="#CBD5E1" stroke-width="1" stroke-linecap="round"/>
+
+  <!-- Building -->
+  <rect x="83" y="72" width="50" height="75" rx="1.5" fill="white" stroke="#94A3B8" stroke-width="1"/>
+  <line x1="83" y1="97" x2="133" y2="97" stroke="#E2E8F0" stroke-width="1"/>
+  <line x1="83" y1="119" x2="133" y2="119" stroke="#E2E8F0" stroke-width="1"/>
+  
+  <!-- Building windows (3 columns x 2 rows, top section) -->
+  <rect x="90" y="78" width="9" height="12" rx="1" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.6"/>
+  <rect x="104" y="78" width="9" height="12" rx="1" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.6"/>
+  <rect x="117" y="78" width="9" height="12" rx="1" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.6"/>
+  
+  <!-- Building windows (middle row) -->
+  <rect x="90" y="102" width="9" height="12" rx="1" fill="white" stroke="#CBD5E1" stroke-width="0.6"/>
+  <rect x="104" y="102" width="9" height="12" rx="1" fill="white" stroke="#CBD5E1" stroke-width="0.6"/>
+  <rect x="117" y="102" width="9" height="12" rx="1" fill="white" stroke="#CBD5E1" stroke-width="0.6"/>
+
+  <!-- Building entrance -->
+  <rect x="104" y="127" width="12" height="18" rx="1" fill="#E2E8F0" stroke="#94A3B8" stroke-width="0.6"/>
+
+  <!-- Tower crane - mast -->
+  <rect x="50" y="36" width="3.5" height="111" fill="#64748B" rx="0.5"/>
+  
+  <!-- Crane mast lattice detail -->
+  <line x1="50" y1="52" x2="53.5" y2="60" stroke="#CBD5E1" stroke-width="0.5"/>
+  <line x1="53.5" y1="52" x2="50" y2="60" stroke="#CBD5E1" stroke-width="0.5"/>
+  <line x1="50" y1="68" x2="53.5" y2="76" stroke="#CBD5E1" stroke-width="0.5"/>
+  <line x1="53.5" y1="68" x2="50" y2="76" stroke="#CBD5E1" stroke-width="0.5"/>
+  <line x1="50" y1="84" x2="53.5" y2="92" stroke="#CBD5E1" stroke-width="0.5"/>
+  <line x1="53.5" y1="84" x2="50" y2="92" stroke="#CBD5E1" stroke-width="0.5"/>
+  <line x1="50" y1="100" x2="53.5" y2="108" stroke="#CBD5E1" stroke-width="0.5"/>
+  <line x1="53.5" y1="100" x2="50" y2="108" stroke="#CBD5E1" stroke-width="0.5"/>
+
+  <!-- Crane jib (main horizontal arm) -->
+  <rect x="38" y="33" width="100" height="2.5" fill="#475569" rx="0.5"/>
+
+  <!-- Crane jib extension -->
+  <rect x="138" y="34" width="18" height="1.5" fill="#94A3B8" rx="0.5"/>
+
+  <!-- Crane cab -->
+  <rect x="44" y="28" width="10" height="7" rx="1.5" fill="#3B82F6"/>
+
+  <!-- Crane counter jib -->
+  <rect x="25" y="34" width="13" height="1.5" fill="#94A3B8" rx="0.5"/>
+
+  <!-- Crane cable -->
+  <line x1="148" y1="35" x2="148" y2="74" stroke="#CBD5E1" stroke-width="0.8" stroke-dasharray="2 2"/>
+
+  <!-- Crane hook assembly -->
+  <path d="M142 72h12v3a6 6 0 0 1-12 0z" stroke="#64748B" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+  <line x1="148" y1="75" x2="148" y2="80" stroke="#64748B" stroke-width="1.2" stroke-linecap="round"/>
+
+  <!-- Load block -->
+  <rect x="141" y="80" width="14" height="5" rx="1" fill="#DBEAFE" stroke="#93C5FD" stroke-width="0.6"/>
+
+  <!-- Small ground details -->
+  <rect x="62" y="141" width="7" height="4" rx="0.5" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="0.5"/>
+  <rect x="72" y="142" width="5" height="3" rx="0.5" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="0.5"/>
+  <rect x="140" y="142" width="6" height="3" rx="0.5" fill="#E2E8F0" stroke="#CBD5E1" stroke-width="0.5"/>
+
+  <!-- AI Badge -->
+  <g class="ai-badge">
+    <rect x="126" y="48" width="28" height="28" rx="7" fill="#2563EB" filter="drop-shadow(0 2px 6px rgba(37,99,235,0.35))"/>
+    <text x="140" y="67" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="12" font-weight="800" fill="white" text-anchor="middle" letter-spacing="1.5">AI</text>
+  </g>
+</svg>

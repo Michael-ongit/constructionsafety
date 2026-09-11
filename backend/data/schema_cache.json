@@ -1,0 +1,906 @@
+{
+  "built_at": 1784784619.3702905,
+  "profiles": {
+    "safety_model": {
+      "table": "safety_model",
+      "row_count": 42430,
+      "sampled_rows": 42427,
+      "excluded_columns": [
+        "ImageBlob"
+      ],
+      "columns": [
+        {
+          "column": "id",
+          "sql_type": "int",
+          "null_pct": 0.0,
+          "distinct_count": 42427,
+          "top_values": [
+            {
+              "value": "1480",
+              "count": 1
+            },
+            {
+              "value": "1481",
+              "count": 1
+            },
+            {
+              "value": "1482",
+              "count": 1
+            }
+          ],
+          "min": 1480.0,
+          "max": 43978.0,
+          "mean": 22764.07
+        },
+        {
+          "column": "date",
+          "sql_type": "date",
+          "null_pct": 0.0,
+          "distinct_count": 34,
+          "top_values": [
+            {
+              "value": "2026-04-27",
+              "count": 2515
+            },
+            {
+              "value": "2026-04-24",
+              "count": 2506
+            },
+            {
+              "value": "2026-04-25",
+              "count": 2501
+            }
+          ]
+        },
+        {
+          "column": "time",
+          "sql_type": "time",
+          "null_pct": 0.0,
+          "distinct_count": 31883,
+          "top_values": [
+            {
+              "value": "10:50:00",
+              "count": 7
+            },
+            {
+              "value": "10:52:00",
+              "count": 7
+            },
+            {
+              "value": "05:02:24",
+              "count": 7
+            }
+          ]
+        },
+        {
+          "column": "CameraZone",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 10,
+          "top_values": [
+            {
+              "value": "BAY2-LLM1-Centre",
+              "count": 33704
+            },
+            {
+              "value": "BAY1_LLM2_Centre",
+              "count": 4007
+            },
+            {
+              "value": "BAY1_LLM1_Centre",
+              "count": 825
+            }
+          ]
+        },
+        {
+          "column": "UnsafeActivity",
+          "sql_type": "nvarchar",
+          "null_pct": 0.0,
+          "distinct_count": 41347,
+          "top_values": [
+            {
+              "value": "1. UNSAFE BENDING",
+              "count": 150
+            },
+            {
+              "value": "1. Wet floor causing slip hazard.",
+              "count": 22
+            },
+            {
+              "value": "1. Wet floor causing slip hazards.",
+              "count": 21
+            }
+          ]
+        },
+        {
+          "column": "recommendation",
+          "sql_type": "nvarchar",
+          "null_pct": 0.0,
+          "distinct_count": 42314,
+          "top_values": [
+            {
+              "value": "",
+              "count": 66
+            },
+            {
+              "value": "1. Clear debris and organize tools.",
+              "count": 4
+            },
+            {
+              "value": "1. Clear debris to prevent tripping.\n2. Improve lighting for better visibility.",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "column": "risk",
+          "sql_type": "nvarchar",
+          "null_pct": 0.0,
+          "distinct_count": 40963,
+          "top_values": [
+            {
+              "value": "",
+              "count": 714
+            },
+            {
+              "value": "1. 1",
+              "count": 40
+            },
+            {
+              "value": "1. Sl",
+              "count": 20
+            }
+          ]
+        },
+        {
+          "column": "remarks",
+          "sql_type": "nvarchar",
+          "null_pct": 0.0,
+          "distinct_count": 1,
+          "top_values": [
+            {
+              "value": "",
+              "count": 42427
+            }
+          ]
+        },
+        {
+          "column": "Project",
+          "sql_type": "nvarchar",
+          "null_pct": 0.0,
+          "distinct_count": 1,
+          "top_values": [
+            {
+              "value": "MPSB",
+              "count": 42427
+            }
+          ]
+        },
+        {
+          "column": "UnSafeConditions",
+          "sql_type": "varchar",
+          "null_pct": 100.0,
+          "distinct_count": 0,
+          "top_values": []
+        }
+      ]
+    },
+    "uauc_evidence": {
+      "table": "uauc_evidence",
+      "row_count": 247,
+      "sampled_rows": 247,
+      "excluded_columns": [
+        "After_Image_Blob"
+      ],
+      "columns": [
+        {
+          "column": "Evidence_Id",
+          "sql_type": "int",
+          "null_pct": 0.0,
+          "distinct_count": 247,
+          "top_values": [
+            {
+              "value": "1",
+              "count": 1
+            },
+            {
+              "value": "2",
+              "count": 1
+            },
+            {
+              "value": "3",
+              "count": 1
+            }
+          ],
+          "min": 1.0,
+          "max": 247.0,
+          "mean": 124.0
+        },
+        {
+          "column": "Audit_Id",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 72,
+          "top_values": [
+            {
+              "value": "AUD-20260626104048",
+              "count": 4
+            },
+            {
+              "value": "AUD-20260626104428",
+              "count": 4
+            },
+            {
+              "value": "AUD-20260626110850",
+              "count": 4
+            }
+          ]
+        },
+        {
+          "column": "Issue_Name",
+          "sql_type": "nvarchar",
+          "null_pct": 0.0,
+          "distinct_count": 125,
+          "top_values": [
+            {
+              "value": "Exposed wires scattered on the ground",
+              "count": 14
+            },
+            {
+              "value": "Exposed wires scattered across the ground",
+              "count": 11
+            },
+            {
+              "value": "Unsafe bending",
+              "count": 10
+            }
+          ]
+        }
+      ]
+    },
+    "uauc_rejection_history": {
+      "table": "uauc_rejection_history",
+      "row_count": 26,
+      "sampled_rows": 26,
+      "excluded_columns": [],
+      "columns": [
+        {
+          "column": "Rejection_Id",
+          "sql_type": "int",
+          "null_pct": 0.0,
+          "distinct_count": 26,
+          "top_values": [
+            {
+              "value": "1",
+              "count": 1
+            },
+            {
+              "value": "2",
+              "count": 1
+            },
+            {
+              "value": "3",
+              "count": 1
+            }
+          ],
+          "min": 1.0,
+          "max": 26.0,
+          "mean": 13.5
+        },
+        {
+          "column": "Audit_Id",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 21,
+          "top_values": [
+            {
+              "value": "MPSB-39",
+              "count": 4
+            },
+            {
+              "value": "MPSB-37",
+              "count": 3
+            },
+            {
+              "value": "MPSB-1",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "column": "Rejected_By",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 2,
+          "top_values": [
+            {
+              "value": "SRAVAN",
+              "count": 25
+            },
+            {
+              "value": "test 1",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "column": "Rejection_Date",
+          "sql_type": "datetime",
+          "null_pct": 0.0,
+          "distinct_count": 8,
+          "top_values": [
+            {
+              "value": "2026-07-10",
+              "count": 15
+            },
+            {
+              "value": "2026-06-26",
+              "count": 4
+            },
+            {
+              "value": "2026-06-25",
+              "count": 2
+            }
+          ],
+          "min": 1782259200000000.0,
+          "max": 1783987200000000.0,
+          "mean": 1783246153846153.8
+        },
+        {
+          "column": "Rejection_Comment",
+          "sql_type": "nvarchar",
+          "null_pct": 0.0,
+          "distinct_count": 19,
+          "top_values": [
+            {
+              "value": "s",
+              "count": 4
+            },
+            {
+              "value": "d",
+              "count": 3
+            },
+            {
+              "value": "f",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "column": "Rework_Count",
+          "sql_type": "int",
+          "null_pct": 0.0,
+          "distinct_count": 4,
+          "top_values": [
+            {
+              "value": "1",
+              "count": 21
+            },
+            {
+              "value": "2",
+              "count": 2
+            },
+            {
+              "value": "3",
+              "count": 2
+            }
+          ],
+          "min": 1.0,
+          "max": 4.0,
+          "mean": 1.35
+        },
+        {
+          "column": "Unresolved_Issues",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 18,
+          "top_values": [
+            {
+              "value": "Safety vest not detected on one worker.",
+              "count": 5
+            },
+            {
+              "value": "Loose cables and hoses on the ground creating potential trip hazards.",
+              "count": 2
+            },
+            {
+              "value": "Safety vest not detected on one worker.; Loose materials and tools scattered on the platform, creating trip hazards.",
+              "count": 2
+            }
+          ]
+        }
+      ]
+    },
+    "compliance_audit": {
+      "table": "compliance_audit",
+      "row_count": 103,
+      "sampled_rows": 103,
+      "excluded_columns": [
+        "Image_Blob",
+        "Pending_Evidence"
+      ],
+      "columns": [
+        {
+          "column": "Sl.No",
+          "sql_type": "int",
+          "null_pct": 0.0,
+          "distinct_count": 103,
+          "top_values": [
+            {
+              "value": "1",
+              "count": 1
+            },
+            {
+              "value": "2",
+              "count": 1
+            },
+            {
+              "value": "3",
+              "count": 1
+            }
+          ],
+          "min": 1.0,
+          "max": 104.0,
+          "mean": 52.31
+        },
+        {
+          "column": "Project",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 4,
+          "top_values": [
+            {
+              "value": "Project A",
+              "count": 54
+            },
+            {
+              "value": "MPSB",
+              "count": 42
+            },
+            {
+              "value": "MABP",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "column": "Activity",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 10,
+          "top_values": [
+            {
+              "value": "Concrete Works",
+              "count": 54
+            },
+            {
+              "value": "Asphalt Laying Activity",
+              "count": 26
+            },
+            {
+              "value": "Bar Bending Operation",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "column": "Sub_Activity",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 30,
+          "top_values": [
+            {
+              "value": "Slab Pouring",
+              "count": 54
+            },
+            {
+              "value": "a",
+              "count": 8
+            },
+            {
+              "value": "act test1",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "column": "Observation_Date",
+          "sql_type": "date",
+          "null_pct": 0.0,
+          "distinct_count": 13,
+          "top_values": [
+            {
+              "value": "2026-06-26",
+              "count": 17
+            },
+            {
+              "value": "2026-07-09",
+              "count": 17
+            },
+            {
+              "value": "2026-06-30",
+              "count": 13
+            }
+          ]
+        },
+        {
+          "column": "Observation_Time",
+          "sql_type": "time",
+          "null_pct": 0.0,
+          "distinct_count": 103,
+          "top_values": [
+            {
+              "value": "05:30:44",
+              "count": 1
+            },
+            {
+              "value": "05:45:26",
+              "count": 1
+            },
+            {
+              "value": "05:45:27",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "column": "Safety_Issues",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 74,
+          "top_values": [
+            {
+              "value": "Worker standing on an elevated platform without visible fall protection.\r\nLoose cables and hoses on the ground creating potential trip hazards.",
+              "count": 14
+            },
+            {
+              "value": "1. Unsafe bending\n2. Exposed wires\n3. Trip hazards\n4. Improper scaffolding setup",
+              "count": 10
+            },
+            {
+              "value": "Wet and slippery floor visible in multiple areas.\r\nLoose debris and materials scattered on the floor.",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "column": "Possible_Risks",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 77,
+          "top_values": [
+            {
+              "value": "Fall from height due to lack of fall protection.\r\nTripping over loose cables and hoses leading to injury.",
+              "count": 15
+            },
+            {
+              "value": "1. High risk of fatal fall from height.\n2. Risk of electrocution or tripping due to exposed wires.",
+              "count": 5
+            },
+            {
+              "value": "Workers may slip and fall due to the wet and slippery floor.\r\nLoose debris may cause trip hazards.",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "column": "Recommendations",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 86,
+          "top_values": [
+            {
+              "value": "Ensure all workers on elevated platforms use appropriate fall protection equipment such as harnesses.\r\nOrganize and secure loose cables and hoses to eliminate trip hazards.",
+              "count": 9
+            },
+            {
+              "value": "Ensure all workers on elevated platforms use proper fall protection equipment such as harnesses.\r\nOrganize and secure loose cables and hoses to eliminate trip hazards.",
+              "count": 6
+            },
+            {
+              "value": "Clean and dry the floor to eliminate slippery surfaces.\r\nRemove loose debris and materials from the floor to prevent trip hazards.\r\nEnsure proper drainage to avoid water accumulation in the work area.",
+              "count": 3
+            }
+          ]
+        },
+        {
+          "column": "Breif_Desription",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 36,
+          "top_values": [
+            {
+              "value": "AI Safety Observation",
+              "count": 54
+            },
+            {
+              "value": "a",
+              "count": 6
+            },
+            {
+              "value": "des test 1",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "column": "Initiated_By",
+          "sql_type": "nvarchar",
+          "null_pct": 0.0,
+          "distinct_count": 7,
+          "top_values": [
+            {
+              "value": "David",
+              "count": 54
+            },
+            {
+              "value": "SRAVAN",
+              "count": 39
+            },
+            {
+              "value": "Mr. Jeyakumar R",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "column": "Location",
+          "sql_type": "nvarchar",
+          "null_pct": 0.0,
+          "distinct_count": 30,
+          "top_values": [
+            {
+              "value": "Tower A - Level 5",
+              "count": 54
+            },
+            {
+              "value": "a",
+              "count": 7
+            },
+            {
+              "value": "loc test1",
+              "count": 5
+            }
+          ]
+        },
+        {
+          "column": "Audit_Id",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 103,
+          "top_values": [
+            {
+              "value": "MPSB-1",
+              "count": 1
+            },
+            {
+              "value": "MPSB-2",
+              "count": 1
+            },
+            {
+              "value": "MPSB-3",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "column": "Site_Engineer",
+          "sql_type": "nvarchar",
+          "null_pct": 0.0,
+          "distinct_count": 7,
+          "top_values": [
+            {
+              "value": "John Smith",
+              "count": 54
+            },
+            {
+              "value": "Harshad",
+              "count": 27
+            },
+            {
+              "value": "DEEPSHIKHA",
+              "count": 10
+            }
+          ]
+        },
+        {
+          "column": "Target_Date",
+          "sql_type": "date",
+          "null_pct": 0.0,
+          "distinct_count": 22,
+          "top_values": [
+            {
+              "value": "2026-06-30",
+              "count": 20
+            },
+            {
+              "value": "2026-06-26",
+              "count": 13
+            },
+            {
+              "value": "2026-07-09",
+              "count": 10
+            }
+          ]
+        },
+        {
+          "column": "Status",
+          "sql_type": "varchar",
+          "null_pct": 0.0,
+          "distinct_count": 4,
+          "top_values": [
+            {
+              "value": "OPEN",
+              "count": 71
+            },
+            {
+              "value": "ACCEPTED",
+              "count": 18
+            },
+            {
+              "value": "AWAITING_APPROVAL",
+              "count": 13
+            }
+          ]
+        },
+        {
+          "column": "Corrective_Action_Taken",
+          "sql_type": "text",
+          "null_pct": 68.9,
+          "distinct_count": 32,
+          "top_values": [
+            {
+              "value": "Cgsg",
+              "count": 1
+            },
+            {
+              "value": "Gdh",
+              "count": 1
+            },
+            {
+              "value": "Xgx",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "column": "Closed_Date",
+          "sql_type": "date",
+          "null_pct": 82.5,
+          "distinct_count": 8,
+          "top_values": [
+            {
+              "value": "2026-07-10",
+              "count": 8
+            },
+            {
+              "value": "2026-06-26",
+              "count": 2
+            },
+            {
+              "value": "2026-07-08",
+              "count": 2
+            }
+          ]
+        },
+        {
+          "column": "Initiator_comment",
+          "sql_type": "nvarchar",
+          "null_pct": 75.7,
+          "distinct_count": 21,
+          "top_values": [
+            {
+              "value": "s",
+              "count": 3
+            },
+            {
+              "value": "d",
+              "count": 3
+            },
+            {
+              "value": "agd",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "column": "tot_Rework_count",
+          "sql_type": "int",
+          "null_pct": 52.4,
+          "distinct_count": 4,
+          "top_values": [
+            {
+              "value": "0.0",
+              "count": 28
+            },
+            {
+              "value": "1.0",
+              "count": 19
+            },
+            {
+              "value": "3.0",
+              "count": 1
+            }
+          ],
+          "min": 0.0,
+          "max": 4.0,
+          "mean": 0.53
+        },
+        {
+          "column": "Closure_SE_Date",
+          "sql_type": "date",
+          "null_pct": 68.9,
+          "distinct_count": 9,
+          "top_values": [
+            {
+              "value": "2026-06-26",
+              "count": 9
+            },
+            {
+              "value": "2026-07-10",
+              "count": 8
+            },
+            {
+              "value": "2026-06-24",
+              "count": 6
+            }
+          ]
+        },
+        {
+          "column": "Closure_SE_Time",
+          "sql_type": "varchar",
+          "null_pct": 68.9,
+          "distinct_count": 31,
+          "top_values": [
+            {
+              "value": "06:29",
+              "count": 2
+            },
+            {
+              "value": "05:42",
+              "count": 1
+            },
+            {
+              "value": "06:22",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "column": "Closed_Time",
+          "sql_type": "time",
+          "null_pct": 82.5,
+          "distinct_count": 18,
+          "top_values": [
+            {
+              "value": "06:49:55.567785",
+              "count": 1
+            },
+            {
+              "value": "06:39:35.262044",
+              "count": 1
+            },
+            {
+              "value": "09:20:27.330495",
+              "count": 1
+            }
+          ]
+        },
+        {
+          "column": "SBG",
+          "sql_type": "varchar",
+          "null_pct": 100.0,
+          "distinct_count": 0,
+          "top_values": []
+        },
+        {
+          "column": "BU",
+          "sql_type": "varchar",
+          "null_pct": 100.0,
+          "distinct_count": 0,
+          "top_values": []
+        }
+      ]
+    }
+  }
+}
